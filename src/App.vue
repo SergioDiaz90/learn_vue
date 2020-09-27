@@ -3,7 +3,8 @@
     <header_component></header_component>
     <Slider></Slider>
     <div class="center">
-      <LastArticle></LastArticle>
+      <!--- <LastArticle></LastArticle> --->
+      <router-view></router-view>
       <Sidebar></Sidebar>
       <div class="clearfix"></div>
     </div>
@@ -15,7 +16,6 @@
   import header_component from './components/header_component'
   import Slider from './components/Slider'
   import Sidebar from './components/Sidebar'
-  import LastArticle from './components/LastArticle'
   import FooterComponent from './components/FooterContent'
 
   export default {
@@ -24,7 +24,6 @@
       header_component,
       Slider,
       Sidebar,
-      LastArticle,
       FooterComponent,
     }
 }
