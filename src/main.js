@@ -5,6 +5,7 @@ import LastArticle from './components/LastArticle'
 import blog from './components/Blog'
 import Formulario from './components/Formulario'
 import Pagina from './components/Pagina'
+import ErrorComponent from './components/ErrorComponent'
 
 Vue.config.productionTip = false
 
@@ -17,7 +18,8 @@ const routes = [
   {'path': '/', component: LastArticle},
   {'path': '/blog', component: blog},
   {'path': '/formulario', component: Formulario},
-  {'path': '/pagina', component: Pagina},
+  {'path': '/pagina/:id?', name: 'Pagina', component: Pagina},
+  {'path': '*', component: ErrorComponent}
 ];
 
 const router = new vueRouter({
