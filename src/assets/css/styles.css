@@ -127,6 +127,21 @@ body {
     text-align: center;
 }
 
+.alert-success-provisional {
+    color: green;
+    font-weight: bold;
+}
+
+.alert-purple-provisional {
+    color: purple;
+    font-weight: bold;
+}
+
+.alert-danger-provisional {
+    color: red;
+    font-weight: bold;
+}
+
 .btn-white{
     display: block;
     background: white;
