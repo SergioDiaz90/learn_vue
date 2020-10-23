@@ -2,26 +2,23 @@
 	<section id="content">
 		<h2 class="subheader">Peliculas</h2>
 		<div id='articles'>
-			<article class="article-item" v-for="film in films" v-bind:key="film.title">
-				<div class="image-wrap">
-					<img 
-						:src="film.image" 
-						:alt="film.title"
-						:title="film.title"
-					>
+			<article class="article-item">
+				<!---  -->
+				<div v-for="film in films" v-bind:key="film.title">
+					<Pelicula :film="film"></Pelicula>
 				</div>
-				<h2>{{film.title}}</h2>
-				<span class="date">{{film.year}}</span>
-				<a href="#">Leer mas</a>
-				<div class="clearfix"></div>
 			</article>
 		</div>
 	</section>
 </template>
 
 <script>
+import Pelicula from './pelicula.vue';
 export default {
-	name : 'peliculas',
+	name : 'Peliculas',
+	components: {
+		Pelicula
+	},
 	data() {
 		return {
 			films: [
